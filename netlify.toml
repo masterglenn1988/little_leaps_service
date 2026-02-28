@@ -1,0 +1,3 @@
+[build]
+  publish = "."              # your site root (where index.html is)
+  functions = "functions"    # folder where your Netlify functions live
