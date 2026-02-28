@@ -10,10 +10,10 @@ export async function handler(event) {
     const { parent_name, email, contact_number, child_name, child_age, service, message } = data;
 
     // Use environment variables
-    const SERVICE_ID = process.env.EMAILJS_SERVICE_ID;
-    const TEMPLATE_ADMIN = process.env.EMAILJS_TEMPLATE_ADMIN;
+    const SERVICE_ID = "service_frprxs9";
+    const TEMPLATE_ADMIN = "template_kdphy56";
     const TEMPLATE_CUSTOMER = process.env.EMAILJS_TEMPLATE_CUSTOMER;
-    const PUBLIC_KEY = process.env.EMAILJS_PUBLIC_KEY;
+    const PUBLIC_KEY = "T6peZlWLR42qvmoNk";
 
     // 1️⃣ Send email to admin
     await emailjs.send(SERVICE_ID, TEMPLATE_ADMIN, {
@@ -27,11 +27,11 @@ export async function handler(event) {
     }, { publicKey: PUBLIC_KEY });
 
     // 2️⃣ Send auto-reply to customer
-    await emailjs.send(SERVICE_ID, TEMPLATE_CUSTOMER, {
-      parent_name,
-      email,
-      service
-    }, { publicKey: PUBLIC_KEY });
+    // await emailjs.send(SERVICE_ID, TEMPLATE_CUSTOMER, {
+    //   parent_name,
+    //   email,
+    //   service
+    // }, { publicKey: PUBLIC_KEY });
 
     return {
       statusCode: 200,
