@@ -2013,3 +2013,7 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.custom-font-popup {
+  font-size: 15px !important;
+}
